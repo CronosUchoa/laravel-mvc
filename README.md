@@ -37,7 +37,11 @@
 [Documentação Larevel 8](https://laravel.com/docs/8.x)
 
 # Etapas:
+    
 ### Etapa 1:
+ * Cadastro e Login com Laravel
+    * [laravel breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)
+        
 
 
 
