@@ -34,7 +34,7 @@
     * Nome
     * Duração
 # Base teórica:
-[Documentação Larevel 8]("https://laravel.com/docs/8.x")
+[Documentação Larevel 8](https://laravel.com/docs/8.x)
 
 # Etapas:
 ### Etapa 1:
