@@ -11,7 +11,7 @@
 # laravel-mvc
 
 ## Observação
- * Primeira experiência com larevel.
+ * Primeira experiência com laravel.
 
 ## Objetivo
   * A aplicação a ser criada é uma loja de música simples. Será necessário criar as seguintes funcionalidades. 
