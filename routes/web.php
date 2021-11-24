@@ -47,4 +47,11 @@ Route::get('/cadastrar', 'App\Http\Controllers\PhotoController@create')->middlew
 require __DIR__ . '/auth.php';
 
 Route::post('/cadastrar','App\Http\Controllers\PhotoController@store')->middleware(['auth'])->name('cadastrar');
-require __DIR__ . '/auth.php';;
+require __DIR__ . '/auth.php';
+
+Route::get('{id}/edit','App\Http\Controllers\PhotoController@edit')->middleware(['auth'])->name('cadastrar');
+require __DIR__ . '/auth.php';
+
+Route::put('{id}/edit','App\Http\Controllers\PhotoController@update')->middleware(['auth'])->name('cadastrar');
+require __DIR__ . '/auth.php';
+

@@ -66,7 +66,7 @@ class PhotoController extends Controller
 					alert(\"Grupo não foi cadastrado com Sucesso.\");
 				</script>
 			";
-            return view('cadastro');
+            return view('cadastrar');
         }
 
     }
@@ -96,7 +96,8 @@ class PhotoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $albumAll = $this->objAlbum->find($id);
+        return view('cadastrar', compact("albumAll"));
     }
 
     /**
@@ -108,7 +109,15 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->objAlbum->where(['id'=>$id])->update([
+            'nomedamusica'=>$request->fnomedamusica,
+            'artista'=>$request->fartista,
+            'genero'=>$request->fgenero,
+            'preco'=>$request->fpreco,
+            'duracao'=>$request->fduracao,
+            'urlImagem'=>$request->furlImagem
+        ]);
+        return redirect('dashboard');
     }
 
     /**
