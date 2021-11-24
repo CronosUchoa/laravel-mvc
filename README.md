@@ -39,9 +39,16 @@
 # Etapas:
     
 ### Etapa 1:
- * Cadastro e Login com Laravel
+ * Criar Cadastro e Login com Laravel
     * [laravel breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze)
-        
+ * Customizações básica do login   
+    * [Framework tailwindcss](https://tailwindcss.com/docs)
+
+### Etapa 2:
+ *  Templates e Rotas
+    * [Controllers](https://laravel.com/docs/8.x/controllers)
+    * Pasta Template - vou utilizar um template estilizado utilizando bootstrap
+
 
 
 
