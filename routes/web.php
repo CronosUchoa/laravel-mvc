@@ -42,6 +42,8 @@ require __DIR__ . '/auth.php';
 Route::get('/visualizar/{id}', 'App\Http\Controllers\PhotoController@show')->middleware(['auth'])->name('visualizar');
 require __DIR__ . '/auth.php';
 
+Route::get('{id}', 'App\Http\Controllers\PhotoController@destroy')->middleware(['auth'])->name('destroy');
+require __DIR__ . '/auth.php';
 
 Route::get('/cadastrar', 'App\Http\Controllers\PhotoController@create')->middleware(['auth'])->name('cadastrar');
 require __DIR__ . '/auth.php';

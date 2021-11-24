@@ -54,6 +54,7 @@
     * Read
     * create
     * update
+    * delete
 
 
 

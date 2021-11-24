@@ -128,6 +128,10 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->objAlbum->where(['id'=>$id])->delete();
+
+        return redirect('dashboard');
+
+
     }
 }
