@@ -79,8 +79,7 @@ class PhotoController extends Controller
      */
     public function show($id)
      {
-    //     $albumAll = $this->objAlbum->all();
-        //  return view('dashboard', compact("albumAll"));
+
         $albumAll = $this->objAlbum->find("$id");
          return view('visualizar', compact("albumAll"));
 
@@ -132,6 +131,18 @@ class PhotoController extends Controller
 
         return redirect('dashboard');
 
+
+    }
+
+
+
+
+
+    public function search(Request $request)
+    {
+       $albumAll =  $this->objAlbum->where(['genero'=>$request->search])
+                    ->paginate();
+         return view('dashboard', compact('albumAll'));
 
     }
 }

@@ -12,7 +12,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
-
+use App\Http\Controllers\PhotoController;
 
 /**
  * fim
@@ -55,5 +55,8 @@ Route::get('{id}/edit','App\Http\Controllers\PhotoController@edit')->middleware(
 require __DIR__ . '/auth.php';
 
 Route::put('{id}/edit','App\Http\Controllers\PhotoController@update')->middleware(['auth'])->name('cadastrar');
+require __DIR__ . '/auth.php';
+
+Route::post('/pesquisar',[PhotoController::class,'search'])->middleware(['auth'])->name('search');
 require __DIR__ . '/auth.php';
 
