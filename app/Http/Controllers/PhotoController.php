@@ -1,11 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
 
+namespace App\Http\Controllers;
+use App\Models\modelAlbum;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
 {
+    private $objAlbum;
+    public function __construct(){
+        $this->objAlbum =  new modelAlbum();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        return view('login');
+        $albumAll = $this->objAlbum->all()->sortBy('nomedamusica');;
+         return view('dashboard', compact("albumAll"));
     }
 
     /**
@@ -23,7 +30,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('cadastrar');
     }
 
     /**
@@ -34,7 +41,34 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $verificadorOK =  $this->objAlbum->create([
+            'nomedamusica'=>$request->fnomedamusica,
+            'artista'=>$request->fartista,
+            'genero'=>$request->fgenero,
+            'preco'=>$request->fpreco,
+            'duracao'=>$request->fduracao,
+            'urlImagem'=>$request->furlImagem
+
+        ]);
+
+        if($verificadorOK){
+            echo "
+				<script type=\"text/javascript\">
+					alert(\"Grupo Cadastrado com Sucesso.\");
+				</script>
+			";
+            $albumAll = $this->objAlbum->all()->sortBy('nomedamusica');;
+            return view('dashboard', compact("albumAll"));
+
+        }else {
+            echo "
+				<script type=\"text/javascript\">
+					alert(\"Grupo não foi cadastrado com Sucesso.\");
+				</script>
+			";
+            return view('cadastro');
+        }
+
     }
 
     /**
@@ -44,9 +78,15 @@ class PhotoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+     {
+    //     $albumAll = $this->objAlbum->all();
+        //  return view('dashboard', compact("albumAll"));
+        $albumAll = $this->objAlbum->find("$id");
+         return view('visualizar', compact("albumAll"));
+
     }
+
+
 
     /**
      * Show the form for editing the specified resource.

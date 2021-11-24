@@ -47,7 +47,13 @@
 ### Etapa 2:
  *  Templates e Rotas
     * [Controllers](https://laravel.com/docs/8.x/controllers)
-    * Pasta Template - vou utilizar um template estilizado utilizando bootstrap
+    * Pasta Template 
+
+### Etapa 3:
+ * Criação do crud
+    * Read
+    * create
+
 
 
 
