@@ -13,7 +13,7 @@
      <th class="px-4 py-2">Gênero</th>
      <th class="px-4 py-2">Preço</th>
      <th class="px-4 py-2">Duração da música em minutos</th>
-     <th class="px-4 py-2"><a href="http://127.0.0.1:8000/dashboard" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" data-toggle="modal" data-target="#exampleModalTwo">Voltar pra página inicial</a></th>
+     
    </tr>
  </thead>
  <tbody>
