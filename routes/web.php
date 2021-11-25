@@ -45,16 +45,16 @@ require __DIR__ . '/auth.php';
 Route::get('{id}', 'App\Http\Controllers\PhotoController@destroy')->middleware(['auth'])->name('destroy');
 require __DIR__ . '/auth.php';
 
-Route::get('/cadastrar', 'App\Http\Controllers\PhotoController@create')->middleware(['auth'])->name('cadastrar');
+Route::get('/cadastrar/create', 'App\Http\Controllers\PhotoController@create')->middleware(['auth'])->name('cadastrar.create');
 require __DIR__ . '/auth.php';
 
 Route::post('/cadastrar','App\Http\Controllers\PhotoController@store')->middleware(['auth'])->name('cadastrar');
 require __DIR__ . '/auth.php';
 
-Route::get('{id}/edit','App\Http\Controllers\PhotoController@edit')->middleware(['auth'])->name('cadastrar');
+Route::get('{id}/edit','App\Http\Controllers\PhotoController@edit')->middleware(['auth'])->name('editar');
 require __DIR__ . '/auth.php';
 
-Route::put('{id}/edit','App\Http\Controllers\PhotoController@update')->middleware(['auth'])->name('cadastrar');
+Route::put('{id}/edit','App\Http\Controllers\PhotoController@update')->middleware(['auth'])->name('editar');
 require __DIR__ . '/auth.php';
 
 Route::post('/pesquisar',[PhotoController::class,'search'])->middleware(['auth'])->name('search');
