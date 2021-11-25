@@ -24,7 +24,7 @@
                         <th class="px-4 py-2">.</th>
                         <th class="px-4 py-2">.</th>
                         <th class="px-4 py-2">.</th>
-                        <th class="px-4 py-2"><a href="{{url("cadastrar")}}" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" data-toggle="modal" data-target="#exampleModalTwo">Cadastrar</a></th>
+                        <th class="px-4 py-2"><a  href="{{url("cadastrar/create")}}" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" data-toggle="modal" data-target="#exampleModalTwo">Cadastrar</a></th>
                     </tr>
                 </thead>
                 <tbody>
