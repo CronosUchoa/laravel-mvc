@@ -3,9 +3,7 @@
 @section('content')
 
 <div class="place-content-start md:place-content-center ">
-<div class="flex justify-end ">
-        <a href="http://127.0.0.1:8000/dashboard" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 px-3 rounded m-2">Voltar pra página inicial</a>
-    </div>
+
     <h1 class=" text-base  text-4xl m-7 text-center">@if(isset($albumAll))Edite o álbum @else Cadastre o álbum @endif<h1>
 
             <div class="w-full max-w-xs mx-auto">
